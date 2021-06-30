@@ -131,6 +131,7 @@ public class Stopwatch extends JLabel {
         f.getContentPane().add(w,BorderLayout.CENTER);
         f.pack();
         f.setVisible(true);
+        f.setBackground(new Color(1, 181, 133));
     }
 
 }

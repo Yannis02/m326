@@ -18,6 +18,7 @@ public class KonfigurationGUI extends JFrame {
     JButton editButton;
     JTextField title;
     JTextField subtitle;
+    JComboBox withJoker;
     //Attributes
     Font original;
     Font titleFont;
@@ -41,6 +42,7 @@ public class KonfigurationGUI extends JFrame {
         setEditButton(new JButton());
         setTitle(new JTextField());
         setSubtitle(new JTextField());
+
         original = new Font("Comic Sans MS", Font.BOLD,18);
         titleFont = new Font("Comic Sans MS", Font.BOLD,32);
         teal = new Color(170, 241, 237);

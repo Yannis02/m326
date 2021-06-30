@@ -16,6 +16,8 @@ public class SpielGUI extends JFrame {
     JPanel topPanel;
     JPanel midPanel;
     JPanel botPanel;
+    JPanel deck;
+    JLabel title;
     Stopwatch timer;
     //Attributes
     Font original;
@@ -38,6 +40,8 @@ public class SpielGUI extends JFrame {
         topPanel = new JPanel();
         midPanel = new JPanel();
         botPanel = new JPanel();
+        deck= new JPanel();
+        title = new JLabel("Memory-solo!");
         timer= new Stopwatch();
         original = new Font("Comic Sans MS", Font.BOLD, 18);
         titleFont = new Font("Comic Sans MS", Font.BOLD, 32);
@@ -46,6 +50,15 @@ public class SpielGUI extends JFrame {
     }
 
     public void modify() {
+        topPanel.setBackground(teal);
+        midPanel.setBackground(teal);
+        botPanel.setBackground(teal);
+        topPanel.setPreferredSize(new Dimension(800,100));
+        midPanel.setPreferredSize(new Dimension(800,600));
+        botPanel.setPreferredSize(new Dimension(800,100));
+        deck.setLayout(new GridLayout(10,10));
+        title.setFont(titleFont);
+        this.setResizable(false);
 
     }
 
@@ -53,7 +66,7 @@ public class SpielGUI extends JFrame {
         this.getContentPane().add(topPanel,BorderLayout.NORTH);
         this.getContentPane().add(midPanel,BorderLayout.CENTER);
         this.getContentPane().add(botPanel,BorderLayout.SOUTH);
-        botPanel.add(new Stopwatch());
+        topPanel.add(title,BorderLayout.CENTER);
     }
 
     public void activate() {
@@ -62,6 +75,6 @@ public class SpielGUI extends JFrame {
     }
 
     public static void main(String[] args) {
-
+SpielGUI g = new SpielGUI();
     }
 }
